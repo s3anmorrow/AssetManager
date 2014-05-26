@@ -13,7 +13,7 @@ var gameConstants = {
 	"FRAME_RATE":26
 };
 
-// manifest of asset information
+// manifest of asset information - If you wish for this to be external I usually put it in a manifest.js file and link in with the HTML
 var manifest = [
     {src:"lib/Snake.png", id:"Snake", data:{
     width:150, height:98, regPoint:"center",
@@ -70,6 +70,7 @@ function onTick(e) {
     document.getElementById("fps").innerHTML = createjs.Ticker.getMeasuredFPS();
 
     // put your other stuff here!
+    // ...
 
     // update the stage!
 	stage.update();
