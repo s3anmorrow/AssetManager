@@ -168,6 +168,8 @@ var AssetManager = function() {
         manifest = myManifest;
 		counter = 0;
 		total = manifest.length;
+        // if browser doesn't suppot the ogg it will attempt to look for an mp3
+        createjs.Sound.alternateExtensions = ["mp3"]
 		// registers the PreloadJS object with SoundJS - will automatically have access to all sound assets
 		preloader.installPlugin(createjs.Sound);
         preloader.on("fileload", onLoaded);
