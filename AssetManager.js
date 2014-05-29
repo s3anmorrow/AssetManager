@@ -123,8 +123,6 @@ var AssetManager = function() {
 				break;
 			case createjs.LoadQueue.SOUND:
 				// sound loaded
-				// not sure we need with SoundJS
-				//sounds.push(e.result);
 				break;
         }
         // keeping track of how many loaded?
@@ -171,7 +169,7 @@ var AssetManager = function() {
 		counter = 0;
 		total = manifest.length;
 		// registers the PreloadJS object with SoundJS - will automatically have access to all sound assets
-		preloader.installPlugin(createjs.SoundJS);
+		preloader.installPlugin(createjs.Sound);
         preloader.on("fileload", onLoaded);
         preloader.on("error", onError);
         preloader.on("complete", onComplete);
