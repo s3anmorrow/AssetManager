@@ -87,7 +87,7 @@ var AssetManager = function() {
 		switch(e.item.type) {
 			case createjs.LoadQueue.IMAGE:
 				// spritesheet loaded
-				var source = e.item.src;
+				var image = e.result;
 				var data = e.item.data;
                 var framesData = null;
 
@@ -112,7 +112,7 @@ var AssetManager = function() {
 
                 // construct Spritesheet object from source
 				spriteSheet = new createjs.SpriteSheet({
-                    images:[preloader.getResult(source)],
+                    images:[image],
 					frames:framesData,
 					animations: data.animations
 				});
