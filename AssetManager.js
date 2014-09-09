@@ -112,7 +112,7 @@ var AssetManager = function() {
 
                 // construct Spritesheet object from source
 				spriteSheet = new createjs.SpriteSheet({
-                    images:[source],
+                    images:[preloader.getResult(source)],
 					frames:framesData,
 					animations: data.animations
 				});
